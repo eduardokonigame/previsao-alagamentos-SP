@@ -167,7 +167,7 @@ async def predict(dados: DadosEntrada):
                 "chuva_1h": round(chuva_final, 2),
                 "acumulado_3d": round(chuva_3d, 2),
                 "media_7d": round(chuva_7d, 2),
-                "origem": origen_dados
+                "origem": origem_dados
             },
             "laudo": f"Modo: {origem_dados}. O modelo HMM classificou a dinâmica do solo como {estado_nome.upper()}. O consenso preditivo calculado via média aritmética simples entre os algoritmos (Random Forest: {prob_rf:.1f}%, XGBoost: {prob_xgb:.1f}%, MLP: {prob_mlp:.1f}%) indica risco médio consolidated de alagamento em {risco_medio}%."
         }
